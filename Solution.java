@@ -72,11 +72,6 @@ class Solver {
 
             //Keep building edges
             graph.get(from).put(top, edge.cost);
-
-            //We have found the shortest edge to destination currency, no need to continue
-            if(top.equals(to))
-                break;
-
             for (var dest : graph.get(top).entrySet()) {
                 double rate = graph.get(from).get(top) * dest.getValue();
 
